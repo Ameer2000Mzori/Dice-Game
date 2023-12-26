@@ -18,7 +18,7 @@
 
 # 📖 About This Project <a name="about-project"></a>
 
-> GitHub Profiles A website built with HTML, SCSS, and TypeScript, utilizing the GitHub API and Axios for seamless data retrieval. Linters are employed to maintain clean code. Explore the live demo to search for any GitHub user.
+> Dice-Game is a website created with HTML, SCSS, and JavaScript, utilizing a linter to overcome code problems and maintain clean code. The game rules are as follows: when you roll a one, you lose your current points; otherwise, you can keep holding your points and change turns to the next player.
 
 # Sample Of Website <a name="Sample-Of-Website"></a>
 
@@ -36,7 +36,6 @@
   <li><a href="https://en.wikipedia.org/wiki/CSS">Css</a></li>
   <li><a href="https://en.wikipedia.org/wiki/Sass_(style_sheet_language)">Scss</a></li>
   <li><a href="https://en.wikipedia.org/wiki/JavaScript">Javascript</a></li>
-  <li><a href="https://en.wikipedia.org/wiki/TypeScript">TypeScript</a></li>
   <li><a href="https://stylelint.io/">Html/CSS Linters</a></li>
   <li><a href="https://eslint.org/">eslinters/TsLinters</a></li>
   </ul>
@@ -49,7 +48,6 @@
 - **[Responsive Website]**
 - **[Flex & Grid]**
 - **[SCSS ]**
-- **[TypeScript ]**
 - **[Linters ]**
 - **[Tslint ]**
 
