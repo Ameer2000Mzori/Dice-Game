@@ -28,5 +28,11 @@ let playerOne = true;
 let playerTwo = false;
 
 // functions
+const rollDice = () => {
+  // create random number between 1-6
+  ////show that number to the screen
+  //////the active player should have that number in current
+};
 
 // event listners
+rollDiceBtn.addEventListener("click", rollDice);
