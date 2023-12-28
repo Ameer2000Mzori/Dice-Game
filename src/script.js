@@ -102,6 +102,23 @@ const changePlayerLogic = () => {
   }
 };
 
+// restart game function
+const restartGame = () => {
+  playerLeft.classList.add("active");
+  playerRight.classList.remove("active");
+  playerOne = true;
+  playerTwo = false;
+  pOneTotalPoints = 0;
+  pOneCurrentPoints = 0;
+  player1PointCurrent.textContent = `${pOneCurrentPoints}`;
+  player1PointCount.textContent = `${pOneTotalPoints}`;
+  pTwoTotalPoints = 0;
+  pTwoCurrentPoints = 0;
+  player2PointCount.textContent = `${pTwoTotalPoints}`;
+  player2PointCurrent.textContent = `${pTwoCurrentPoints}`;
+};
+
 // event listners
 rollDiceBtn.addEventListener("click", rollDice);
 holdBtn.addEventListener("click", holdPoint);
+restartBtn.addEventListener("click", restartGame);
