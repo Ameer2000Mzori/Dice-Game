@@ -44,21 +44,7 @@ const rollDice = () => {
 // player change Playing function
 const changePlayerCheck = (randNum) => {
   if (randNum === 1) {
-    if (playerOne) {
-      pOneCurrentPoints = 0;
-      playerOne = false;
-      playerTwo = true;
-      player1PointCurrent.textContent = `${pOneCurrentPoints}`;
-      playerLeft.classList.remove("active");
-      playerRight.classList.add("active");
-    } else {
-      pTwoCurrentPoints = 0;
-      playerOne = true;
-      playerTwo = false;
-      player2PointCurrent.textContent = `${pTwoCurrentPoints}`;
-      playerLeft.classList.add("active");
-      playerRight.classList.remove("active");
-    }
+    changePlayerLogic();
   }
   ////////the active player should have that number in current
   playerOne ? pOnePlaying(randNum) : pTwoPlaying(randNum);
@@ -86,26 +72,34 @@ const holdPoint = () => {
 //player one points holder
 const holdPlayerOne = () => {
   pOneTotalPoints += pOneCurrentPoints;
-  console.log(pOneTotalPoints);
-  pOneCurrentPoints = 0;
-  player1PointCurrent.textContent = `${pOneCurrentPoints}`;
   player1PointCount.textContent = `${pOneTotalPoints}`;
-  playerOne = false;
-  playerTwo = true;
-  playerLeft.classList.remove("active");
-  playerRight.classList.add("active");
+  changePlayerLogic();
 };
 
 //player Two points holder
 const holdPlayerTwo = () => {
   pTwoTotalPoints += pTwoCurrentPoints;
-  pTwoCurrentPoints = 0;
-  player2PointCurrent.textContent = `${pTwoCurrentPoints}`;
   player2PointCount.textContent = `${pTwoTotalPoints}`;
-  playerOne = true;
-  playerTwo = false;
-  playerLeft.classList.add("active");
-  playerRight.classList.remove("active");
+  changePlayerLogic();
+};
+
+// change the game logic
+const changePlayerLogic = () => {
+  if (playerOne) {
+    pOneCurrentPoints = 0;
+    player1PointCurrent.textContent = `${pOneCurrentPoints}`;
+    playerOne = false;
+    playerTwo = true;
+    playerLeft.classList.remove("active");
+    playerRight.classList.add("active");
+  } else {
+    pTwoCurrentPoints = 0;
+    playerOne = true;
+    playerTwo = false;
+    player2PointCurrent.textContent = `${pTwoCurrentPoints}`;
+    playerLeft.classList.add("active");
+    playerRight.classList.remove("active");
+  }
 };
 
 // event listners
