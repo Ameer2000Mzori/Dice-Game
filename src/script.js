@@ -11,7 +11,7 @@ const player1PointCurrent = document.getElementsByClassName(
 )[0];
 const player1PointCount = document.getElementsByClassName(
   "player-1-Point-Count"
-);
+)[0];
 //player two selected
 const playerRight = document.getElementsByClassName("player-Right")[0];
 const player2PointCurrent = document.getElementsByClassName(
@@ -19,7 +19,7 @@ const player2PointCurrent = document.getElementsByClassName(
 )[0];
 const player2PointCount = document.getElementsByClassName(
   "player-2-Point-Count"
-);
+)[0];
 
 // gelobal variables
 let playerOne = true;
@@ -79,17 +79,34 @@ const pTwoPlaying = (randNum) => {
 };
 
 // Hold Points Function
-const holdPoint = (pOneCurrentPoints, pTwoCurrentPoints) => {
-  playerOne
-    ? holdPlayerOne(pOneCurrentPoints)
-    : holdPlayerTwo(pTwoCurrentPoints);
+const holdPoint = () => {
+  playerOne ? holdPlayerOne() : holdPlayerTwo();
 };
 
 //player one points holder
-const holdPlayerOne = (pOneCurrentPoints) => {};
+const holdPlayerOne = () => {
+  pOneTotalPoints += pOneCurrentPoints;
+  console.log(pOneTotalPoints);
+  pOneCurrentPoints = 0;
+  player1PointCurrent.textContent = `${pOneCurrentPoints}`;
+  player1PointCount.textContent = `${pOneTotalPoints}`;
+  playerOne = false;
+  playerTwo = true;
+  playerLeft.classList.remove("active");
+  playerRight.classList.add("active");
+};
 
 //player Two points holder
-const holdPlayerTwo = (pTwoCurrentPoints) => {};
+const holdPlayerTwo = () => {
+  pTwoTotalPoints += pTwoCurrentPoints;
+  pTwoCurrentPoints = 0;
+  player2PointCurrent.textContent = `${pTwoCurrentPoints}`;
+  player2PointCount.textContent = `${pTwoTotalPoints}`;
+  playerOne = true;
+  playerTwo = false;
+  playerLeft.classList.add("active");
+  playerRight.classList.remove("active");
+};
 
 // event listners
 rollDiceBtn.addEventListener("click", rollDice);
