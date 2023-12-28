@@ -134,6 +134,13 @@ const disableButtons = () => {
   holdBtn.disabled = true;
 };
 
+// enable buttons function
+const enableButtons = () => {
+  restartBtn.disabled = false;
+  rollDiceBtn.disabled = false;
+  holdBtn.disabled = false;
+};
+
 // restart game function
 const restartGame = () => {
   playerLeft.classList.add("active");
@@ -148,6 +155,7 @@ const restartGame = () => {
   pTwoCurrentPoints = 0;
   player2PointCount.textContent = `${pTwoTotalPoints}`;
   player2PointCurrent.textContent = `${pTwoCurrentPoints}`;
+  enableButtons();
 };
 
 // event listners
