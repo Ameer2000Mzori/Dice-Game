@@ -110,6 +110,17 @@ body {
         position: absolute;
         bottom: 25px;
       }
+
+      .dice-Img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 25px;
+        width: 25px;
+        background-color: black;
+        display: block;
+      }
     }
   }
 }
