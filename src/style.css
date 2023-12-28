@@ -71,3 +71,8 @@ body {
 .header .header-Wrap .game-Wrap #game-Buttons {
   position: absolute;
 }
+
+.header .header-Wrap .game-Wrap .restart-Btn {
+  position: absolute;
+  top: 25px;
+}
