@@ -23,7 +23,9 @@ const player2PointCount = document.getElementsByClassName(
   "player-2-Point-Count"
 );
 
-// gelobal varibales
+// gelobal variables
+let playerOne = true;
+let playerTwo = false;
 
 // functions
 
