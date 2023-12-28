@@ -48,11 +48,11 @@ const rollDice = () => {
 
 // player change Playing function
 const changePlayerCheck = (randNum) => {
-  if (randNum === 1) {
-    changePlayerLogic();
-  }
-  ////////the active player should have that number in current
-  playerOne ? pOnePlaying(randNum) : pTwoPlaying(randNum);
+  randNum === 1
+    ? changePlayerLogic()
+    : playerOne
+    ? pOnePlaying(randNum)
+    : pTwoPlaying(randNum);
 };
 
 // player one playing function
