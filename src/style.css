@@ -120,8 +120,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 25px;
-  width: 25px;
+  height: 100px;
+  width: 100px;
   background-color: black;
   display: block;
+  background-image: url("./assets/dice-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
