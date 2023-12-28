@@ -1,5 +1,6 @@
 // selecting elements
 const diceImgEl = document.getElementsByClassName("dice-Img")[0];
+const playersCurrentsTitlesTexts = document.querySelectorAll(".player-1-T-T-3");
 ////buttons selecte
 const restartBtn = document.getElementsByClassName("restart-Btn")[0];
 const rollDiceBtn = document.getElementsByClassName("roll-Dice-Btn")[0];
@@ -33,11 +34,7 @@ let pTwoCurrentPoints = 0;
 ////roll Dice Function
 const rollDice = () => {
   if (pOneTotalPoints >= 100 || pTwoTotalPoints >= 100) {
-    if (pOneTotalPoints >= 100) {
-      playerOneWon();
-    } else {
-      playerTwoWon();
-    }
+    playerWon();
   } else {
     // create random number between 1-6
     let randNum = Math.round(Math.random() * 5) + 1;
@@ -110,20 +107,15 @@ const changePlayerLogic = () => {
   }
 };
 
-// player one won logic function
-const playerOneWon = () => {
-  player1PointCurrent.textContent = `
-  PLAYER One WON THE GAME
-  PRESS RESTART`;
-
-  disableButtons();
-};
-
-// player Two won logic function
-const playerTwoWon = () => {
-  player2PointCurrent.textContent = `
-    PLAYER TWO WON THE GAME
-    PRESS RESTART`;
+// player won
+const playerWon = () => {
+  if (pOneTotalPoints >= 100) {
+    playersCurrentsTitlesTexts[0].textContent =
+      "PLAYER One WON THE GAME PRESS RESTART";
+  } else {
+    playersCurrentsTitlesTexts[1].textContent =
+      "PLAYER Two WON THE GAME PRESS RESTART";
+  }
   disableButtons();
 };
 
