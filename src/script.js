@@ -32,13 +32,21 @@ let pTwoCurrentPoints = 0;
 // functions
 ////roll Dice Function
 const rollDice = () => {
-  // create random number between 1-6
-  let randNum = Math.round(Math.random() * 5) + 1;
-  console.log(randNum);
-  ////show that number to the screen
-  diceImgEl.style.backgroundImage = `url(./assets/dice-${randNum}.png)`;
-  //////check if the player gets 1 or not if ues then give it to other player
-  changePlayerCheck(randNum);
+  if (pOneTotalPoints >= 100 || pTwoTotalPoints >= 100) {
+    if (pOneTotalPoints >= 100) {
+      playerOneWon();
+    } else {
+      playerTwoWon();
+    }
+  } else {
+    // create random number between 1-6
+    let randNum = Math.round(Math.random() * 5) + 1;
+    console.log(randNum);
+    ////show that number to the screen
+    diceImgEl.style.backgroundImage = `url(./assets/dice-${randNum}.png)`;
+    //////check if the player gets 1 or not if ues then give it to other player
+    changePlayerCheck(randNum);
+  }
 };
 
 // player change Playing function
