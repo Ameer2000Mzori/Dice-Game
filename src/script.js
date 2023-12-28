@@ -30,6 +30,7 @@ let pTwoTotalPoints = 0;
 let pTwoCurrentPoints = 0;
 
 // functions
+////roll Dice Function
 const rollDice = () => {
   // create random number between 1-6
   let randNum = Math.round(Math.random() * 5) + 1;
@@ -77,5 +78,19 @@ const pTwoPlaying = (randNum) => {
   player2PointCurrent.textContent = `${pTwoCurrentPoints}`;
 };
 
+// Hold Points Function
+const holdPoint = (pOneCurrentPoints, pTwoCurrentPoints) => {
+  playerOne
+    ? holdPlayerOne(pOneCurrentPoints)
+    : holdPlayerTwo(pTwoCurrentPoints);
+};
+
+//player one points holder
+const holdPlayerOne = (pOneCurrentPoints) => {};
+
+//player Two points holder
+const holdPlayerTwo = (pTwoCurrentPoints) => {};
+
 // event listners
 rollDiceBtn.addEventListener("click", rollDice);
+holdBtn.addEventListener("click", holdPoint);
