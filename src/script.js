@@ -36,18 +36,32 @@ const rollDice = () => {
   console.log(randNum);
   ////show that number to the screen
   diceImgEl.style.backgroundImage = `url(./assets/dice-${randNum}.png)`;
-  //////the active player should have that number in current
-  playerOne ? pOnePlaying() : pTwoPlaying();
+  //////check if the player gets 1 or not if ues then give it to other player
+  if (randNum === 1) {
+    if (playerOne) {
+      playerOne = false;
+      playerTwo = true;
+    } else {
+      playerOne = true;
+      playerTwo = false;
+    }
+  }
+  ////////the active player should have that number in current
+  playerOne ? pOnePlaying(randNum) : pTwoPlaying(randNum);
 };
 
 // player one playing function
-const pOnePlaying = () => {
+const pOnePlaying = (randNum) => {
+  pOneCurrentPoints += randNum;
   console.log("player one playing");
+  player1PointCurrent.textContent = `${pOneCurrentPoints}`;
 };
 
 // player Two playing function
-const pTwoPlaying = () => {
+const pTwoPlaying = (randNum) => {
+  pTwoCurrentPoints += randNum;
   console.log("player Two playing");
+  player2PointCurrent.textContent = `${pTwoCurrentPoints}`;
 };
 
 // event listners
