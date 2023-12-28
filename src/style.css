@@ -76,3 +76,8 @@ body {
   position: absolute;
   top: 25px;
 }
+
+.header .header-Wrap .game-Wrap .roll-Dice-Btn {
+  position: absolute;
+  bottom: 25px;
+}
