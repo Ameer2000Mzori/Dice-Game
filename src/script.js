@@ -109,13 +109,11 @@ const changePlayerLogic = () => {
 
 // player won
 const playerWon = () => {
-  if (pOneTotalPoints >= 100) {
-    playersCurrentsTitlesTexts[0].textContent =
-      "PLAYER One WON THE GAME PRESS RESTART";
-  } else {
-    playersCurrentsTitlesTexts[1].textContent =
-      "PLAYER Two WON THE GAME PRESS RESTART";
-  }
+  pOneTotalPoints >= 100
+    ? (playersCurrentsTitlesTexts[0].textContent =
+        "PLAYER One WON THE GAME PRESS RESTART")
+    : (playersCurrentsTitlesTexts[1].textContent =
+        "PLAYER Two WON THE GAME PRESS RESTART");
   disableButtons();
 };
 
