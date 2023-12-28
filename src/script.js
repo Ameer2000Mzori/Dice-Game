@@ -146,6 +146,8 @@ const restartGame = () => {
   player2PointCount.textContent = `${pTwoTotalPoints}`;
   player2PointCurrent.textContent = `${pTwoCurrentPoints}`;
   enableButtons();
+  playersCurrentsTitlesTexts[0].textContent = "CURRENT";
+  playersCurrentsTitlesTexts[1].textContent = "CURRENT";
 };
 
 // event listners
