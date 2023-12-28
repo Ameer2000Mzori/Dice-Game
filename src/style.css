@@ -79,6 +79,11 @@ body {
   cursor: pointer;
 }
 
+.header .header-Wrap .game-Wrap #game-Buttons:hover {
+  color: black;
+  background-color: white;
+}
+
 .header .header-Wrap .game-Wrap .restart-Btn {
   position: absolute;
   top: 25px;
