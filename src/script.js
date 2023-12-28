@@ -121,14 +121,12 @@ const playerWon = () => {
 
 // disable buttons function
 const disableButtons = () => {
-  restartBtn.disabled = true;
   rollDiceBtn.disabled = true;
   holdBtn.disabled = true;
 };
 
 // enable buttons function
 const enableButtons = () => {
-  restartBtn.disabled = false;
   rollDiceBtn.disabled = false;
   holdBtn.disabled = false;
 };
