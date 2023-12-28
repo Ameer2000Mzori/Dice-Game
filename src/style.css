@@ -16,7 +16,7 @@ body {
 
 .header .header-Wrap {
   width: 700px;
-  height: 700px;
+  height: 600px;
 }
 
 .header .header-Wrap .game-Wrap {
@@ -29,14 +29,15 @@ body {
   justify-content: center;
 }
 
-.header .header-Wrap .game-Wrap .player-Left {
-  width: 50%;
-  height: 100%;
-}
-
+.header .header-Wrap .game-Wrap .player-Left,
 .header .header-Wrap .game-Wrap .player-Right {
   width: 50%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .header .header-Wrap .game-Wrap #game-Buttons {
