@@ -73,10 +73,17 @@ body {
         color: white;
         font-size: 1rem;
         cursor: pointer;
+        transition: all 50ms ease-in-out;
 
         &:hover {
           color: black;
           background-color: white;
+        }
+
+        &:active {
+          color: black;
+          background-color: white;
+          transform: scale(0.9);
         }
       }
 
