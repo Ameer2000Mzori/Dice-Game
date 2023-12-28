@@ -65,7 +65,14 @@ body {
       }
 
       #game-Buttons {
-        position: absolute;
+        padding: 7px 30px;
+        border-radius: 1rem;
+        border: solid black 2px;
+        font-family: $fontTwo;
+        background-color: black;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
       }
 
       .restart-Btn {
