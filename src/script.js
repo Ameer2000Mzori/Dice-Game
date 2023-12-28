@@ -127,6 +127,13 @@ const playerTwoWon = () => {
   disableButtons();
 };
 
+// disable buttons function
+const disableButtons = () => {
+  restartBtn.disabled = true;
+  rollDiceBtn.disabled = true;
+  holdBtn.disabled = true;
+};
+
 // restart game function
 const restartGame = () => {
   playerLeft.classList.add("active");
