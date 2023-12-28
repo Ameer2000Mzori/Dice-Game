@@ -37,13 +37,26 @@ const rollDice = () => {
   ////show that number to the screen
   diceImgEl.style.backgroundImage = `url(./assets/dice-${randNum}.png)`;
   //////check if the player gets 1 or not if ues then give it to other player
+  changePlayerCheck(randNum);
+};
+
+// player change Playing function
+const changePlayerCheck = (randNum) => {
   if (randNum === 1) {
     if (playerOne) {
+      pOneCurrentPoints = 0;
       playerOne = false;
       playerTwo = true;
+      player1PointCurrent.textContent = `${pOneCurrentPoints}`;
+      playerLeft.classList.remove("active");
+      playerRight.classList.add("active");
     } else {
+      pTwoCurrentPoints = 0;
       playerOne = true;
       playerTwo = false;
+      player2PointCurrent.textContent = `${pTwoCurrentPoints}`;
+      playerLeft.classList.add("active");
+      playerRight.classList.remove("active");
     }
   }
   ////////the active player should have that number in current
