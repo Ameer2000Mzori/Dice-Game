@@ -124,12 +124,43 @@ body {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        transition: all 500ms ease-in-out;
+        transition: all 100ms ease-in-out;
       }
     }
   }
 }
 // header resoponsvness
 @media screen and (max-width: 768px) {
-  // 768px size
+  .header {
+    .header-Wrap {
+      width: 360px;
+      height: 600px;
+
+      .game-Wrap {
+        .player-Left,
+        .player-Right {
+          .player-1-T-T-1 {
+            font-size: 1.5rem;
+          }
+
+          #count-Players {
+            font-size: 1.5rem;
+          }
+
+          .player-1-T-T-3 {
+            font-size: 1.5rem;
+          }
+
+          #current-Players {
+            font-size: 1.5rem;
+          }
+        }
+
+        .dice-Img {
+          height: 75px;
+          width: 75px;
+        }
+      }
+    }
+  }
 }

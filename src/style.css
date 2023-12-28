@@ -112,7 +112,34 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: all 500ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .header .header-Wrap {
+    width: 360px;
+    height: 600px;
+  }
+  .header .header-Wrap .game-Wrap .player-Left .player-1-T-T-1,
+  .header .header-Wrap .game-Wrap .player-Right .player-1-T-T-1 {
+    font-size: 1.5rem;
+  }
+  .header .header-Wrap .game-Wrap .player-Left #count-Players,
+  .header .header-Wrap .game-Wrap .player-Right #count-Players {
+    font-size: 1.5rem;
+  }
+  .header .header-Wrap .game-Wrap .player-Left .player-1-T-T-3,
+  .header .header-Wrap .game-Wrap .player-Right .player-1-T-T-3 {
+    font-size: 1.5rem;
+  }
+  .header .header-Wrap .game-Wrap .player-Left #current-Players,
+  .header .header-Wrap .game-Wrap .player-Right #current-Players {
+    font-size: 1.5rem;
+  }
+  .header .header-Wrap .game-Wrap .dice-Img {
+    height: 75px;
+    width: 75px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
