@@ -34,16 +34,20 @@ const rollDice = () => {
   // create random number between 1-6
   let randNum = Math.round(Math.random() * 5) + 1;
   console.log(randNum);
-  //
   ////show that number to the screen
   diceImgEl.style.backgroundImage = `url(./assets/dice-${randNum}.png)`;
-  //
   //////the active player should have that number in current
-  if (playerOne) {
-    pOnePoints += randNum;
-  } else {
-    pTwoPoints += randNum;
-  }
+  playerOne ? pOnePlaying() : pTwoPlaying();
+};
+
+// player one playing function
+const pOnePlaying = () => {
+  console.log("player one playing");
+};
+
+// player Two playing function
+const pTwoPlaying = () => {
+  console.log("player Two playing");
 };
 
 // event listners
