@@ -40,6 +40,34 @@ body {
   justify-content: space-evenly;
 }
 
+.header .header-Wrap .game-Wrap .player-Left .player-1-T-T-1,
+.header .header-Wrap .game-Wrap .player-Right .player-1-T-T-1 {
+  font-family: "Rubik Doodle Shadow", cursive;
+  font-size: 2rem;
+  color: red;
+}
+
+.header .header-Wrap .game-Wrap .player-Left #count-Players,
+.header .header-Wrap .game-Wrap .player-Right #count-Players {
+  font-family: "Rubik Doodle Shadow", cursive;
+  font-size: 2rem;
+  color: red;
+}
+
+.header .header-Wrap .game-Wrap .player-Left .player-1-T-T-3,
+.header .header-Wrap .game-Wrap .player-Right .player-1-T-T-3 {
+  font-family: "Rubik Doodle Shadow", cursive;
+  font-size: 2rem;
+  color: red;
+}
+
+.header .header-Wrap .game-Wrap .player-Left #current-Players,
+.header .header-Wrap .game-Wrap .player-Right #current-Players {
+  font-family: "Rubik Doodle Shadow", cursive;
+  font-size: 2rem;
+  color: red;
+}
+
 .header .header-Wrap .game-Wrap #game-Buttons {
   position: absolute;
 }

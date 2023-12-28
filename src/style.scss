@@ -38,6 +38,30 @@ body {
         text-align: center;
         align-items: center;
         justify-content: space-evenly;
+
+        .player-1-T-T-1 {
+          font-family: $fontTwo;
+          font-size: 2rem;
+          color: red;
+        }
+
+        #count-Players {
+          font-family: $fontTwo;
+          font-size: 2rem;
+          color: red;
+        }
+
+        .player-1-T-T-3 {
+          font-family: $fontTwo;
+          font-size: 2rem;
+          color: red;
+        }
+
+        #current-Players {
+          font-family: $fontTwo;
+          font-size: 2rem;
+          color: red;
+        }
       }
 
       #game-Buttons {
