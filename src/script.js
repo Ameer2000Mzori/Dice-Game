@@ -110,6 +110,23 @@ const changePlayerLogic = () => {
   }
 };
 
+// player one won logic function
+const playerOneWon = () => {
+  player1PointCurrent.textContent = `
+  PLAYER One WON THE GAME
+  PRESS RESTART`;
+
+  disableButtons();
+};
+
+// player Two won logic function
+const playerTwoWon = () => {
+  player2PointCurrent.textContent = `
+    PLAYER TWO WON THE GAME
+    PRESS RESTART`;
+  disableButtons();
+};
+
 // restart game function
 const restartGame = () => {
   playerLeft.classList.add("active");
