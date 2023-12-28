@@ -42,6 +42,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   background-color: rgb(150, 150, 150);
+  transition: all 250ms ease-in-out;
 }
 
 .header .header-Wrap .game-Wrap .player-Left .player-1-T-T-1,
@@ -106,10 +107,10 @@ body {
 
 .header .header-Wrap .game-Wrap .roll-Dice-Btn {
   position: absolute;
-  bottom: 25px;
+  bottom: 75px;
 }
 
 .header .header-Wrap .game-Wrap .hold-Btn {
   position: absolute;
-  bottom: 75px;
+  bottom: 25px;
 }

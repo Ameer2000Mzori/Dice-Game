@@ -42,6 +42,7 @@ body {
         align-items: center;
         justify-content: space-evenly;
         background-color: rgb(150, 150, 150);
+        transition: all 250ms ease-in-out;
 
         .player-1-T-T-1 {
           font-family: $fontTwo;
@@ -102,12 +103,12 @@ body {
 
       .roll-Dice-Btn {
         position: absolute;
-        bottom: 25px;
+        bottom: 75px;
       }
 
       .hold-Btn {
         position: absolute;
-        bottom: 75px;
+        bottom: 25px;
       }
     }
   }
