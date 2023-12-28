@@ -24,15 +24,26 @@ const player2PointCount = document.getElementsByClassName(
 // gelobal variables
 let playerOne = true;
 let playerTwo = false;
+let pOneTotalPoints = 0;
+let pOneCurrentPoints = 0;
+let pTwoTotalPoints = 0;
+let pTwoCurrentPoints = 0;
 
 // functions
 const rollDice = () => {
   // create random number between 1-6
   let randNum = Math.round(Math.random() * 5) + 1;
   console.log(randNum);
-  diceImgEl.style.backgroundImage = `url(./assets/dice-${randNum}.png)`;
+  //
   ////show that number to the screen
+  diceImgEl.style.backgroundImage = `url(./assets/dice-${randNum}.png)`;
+  //
   //////the active player should have that number in current
+  if (playerOne) {
+    pOnePoints += randNum;
+  } else {
+    pTwoPoints += randNum;
+  }
 };
 
 // event listners
