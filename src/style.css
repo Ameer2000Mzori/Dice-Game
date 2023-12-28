@@ -81,3 +81,8 @@ body {
   position: absolute;
   bottom: 25px;
 }
+
+.header .header-Wrap .game-Wrap .hold-Btn {
+  position: absolute;
+  bottom: 75px;
+}
